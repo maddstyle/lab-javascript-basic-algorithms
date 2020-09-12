@@ -106,3 +106,6 @@ const isPalindrome = (str) => {
 for (let i = ""; i.length <= 10; i += "*"){
   console.log(i);
 }
+
+// find shortest word
+const findShort = s => s.split(' ').map(function derp(elem){return elem.length}).sort(function sortnum(a,b){return a-b})[0]
