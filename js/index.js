@@ -107,5 +107,54 @@ for (let i = ""; i.length <= 10; i += "*"){
   console.log(i);
 }
 
-// find shortest word
-const findShort = s => s.split(' ').map(function derp(elem){return elem.length}).sort(function sortnum(a,b){return a-b})[0]
+
+//Find the value of the price property and if it is greater than 100, discount it by 10%. If that’s not the case, discount it by 7%. Update the object with :
+
+//the new property - discount and the corresponding value (7% or 10%) and the new price.
+let product = {
+  name: "headphones",
+  price: 100,
+  discount: 0
+};
+
+  if (product.price > 100) {
+discount = ((product.price / 100) * 10);
+product.price = (product.price - discount);
+} else {
+discount = ((product.price / 100) * 7);
+product.price = (product.price - discount);
+}
+console.log (product.price);
+console.log("Updated product:", product);
+
+
+//Use given object and loop through its properties and if it has property “discount” print “Already discounted by…” and add the value (how much was the discount). In opposite case, do what you did in the previous exercise: check the price, depending on it (if it’s greater or lower than 100) add discount (10% or 7%) and add the property “discount” to the object.
+//Note: To test, un-comment out line discount: "7%".
+let prod = {
+  name: "headphones",
+  price: 83.7,
+  discount: "7%",
+};
+let v
+
+for (key in prod){
+v = ("discount" in prod);
+if (v = true) {
+ console.log ("Already discounted by ",prod.discount) 
+}
+else if (product.price > 100) {
+discount = ((product.price / 100) * 10);
+product.price = (product.price - discount);
+} else {
+discount = ((product.price / 100) * 7);
+product.price = (product.price - discount);
+}
+}    
+console.log(prod);
+// end result - case 1:
+// { name: 'headphones', price: '77.84', discount: '7%' }
+
+// end result - case 2:
+// Already discounted by 7%.
+
+
