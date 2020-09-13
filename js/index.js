@@ -158,3 +158,37 @@ console.log(prod);
 // Already discounted by 7%.
 
 
+// Using the given array of objects:
+
+// display price of iPhone,
+// display both phones’ names,
+// add a new phone at the beginning of the array,
+// remove the last element of the array
+
+let products = [
+  {
+      name: "iPhone",
+      price: 799.99
+  },
+  {
+      name: "Samsung Galaxy S10",
+      price: 900.00
+  }
+]
+
+console.log(products[0].price);
+console.log(products[0].name);
+console.log(products[1].name);
+
+let newPhone = {
+name: "Motorola",
+price: 400.00
+}
+
+products.unshift(newPhone);
+
+console.log(products);
+
+products.pop();
+
+console.log(products)
