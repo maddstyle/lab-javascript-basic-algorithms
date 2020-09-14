@@ -287,3 +287,50 @@ let basic = {
 //Use the example from the lesson with frameworks to retrieve the following:
 console.log(basic.frameworks[0].list[0].name); // => ExpressJS
 console.log("In Ironhack, I'll learn",basic.frameworks[0].list[0].name," and ",basic.frameworks[1].list[0].name); // => In Ironhack, I'll learn ExpressJS and ReactJS.
+
+
+
+
+// Define a function, name it however you prefer respecting the good naming conventions, loop through the array and print the type of each element of the array in the console.
+
+const studentInfo = ["max", 34, true, {name: "sandra",
+ student: true},
+  ["javascript", "mongodb", "react"]];
+
+console.log(studentInfo);
+
+studentInfo.forEach(elem => {
+  let theType = typeof elem;
+  console.log(`The variable ${elem} is type of ${theType}`);
+});
+
+
+
+
+// Define a function checkProperty() that will use the following object passed as an argument to print the output in the console:
+let property = {
+  owner: {
+    firstName: "John",
+    lastName: "Doe",
+    age: 44
+  },
+  isForSale: true,
+  sqrm: 120,
+  address: {
+    street: "Happy St",
+    number: 123,
+    city: "Miami",
+    state: "FL",
+    country: "US"
+  },
+  amenities: ["pool", "tennis court", "private parking", "yard"]
+}
+
+function getCredentials(listing){
+  if(property.isForSale = true){
+    console.log(`${property.owner.firstName} ${property.owner.lastName} put the home for sale! The property has 4 amenities: ${property.amenities}`);
+  } else {
+    console.log("Property is not for sale.")
+  }
+}
+getCredentials(property);

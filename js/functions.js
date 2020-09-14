@@ -17,12 +17,12 @@ printToTwenty()
 
 // ?
 // Define a function printNumbers() that receives one argument and prints the numbers from 0 to whatever number we pass to it as an argument
-// function printNumbers(num){
-//   for(let i = 0; i < num; i++){
-//     console.log(`${num}`);
-//   }
-// }
-// printNumbers(7);
+function printNumbers(num){
+  for(let i = 0; i <= num; i++){
+    console.log(`${num}`);
+  }
+}
+printNumbers(7);
 
 // Define a function printArrElements(someArr) that will loop through array and print all the elements of that array. Use the following array to pass it as an argument to the function you’ve just defined:
 
@@ -63,3 +63,66 @@ function stringToLetters(name){
   return name.split("");
 }
 stringToLetters("Michaela")
+
+
+
+// Define a function that will:
+// count from 1 to 100,
+// on numbers divisible with 4 print “Hey”,
+// on numbers divisible with 6 print “There”,
+// on numbers divisible with both 4 and 6 print “Ironhack”,
+// skip numbers divisible with 7,
+// on the number that represents your age add ! (ex. 34!).
+function countToHundred(){
+  for(let i = 1; i <= 100; i++){
+    if ((i % 4 === 0) && (i % 6 === 0)){
+      console.log("Ironhack");
+    } else if (i % 4 === 0){
+      console.log("Hey");
+    } else if (i % 6 === 0){
+      console.log("There");
+    } else if (i % 7 === 0){
+      continue;
+    } else if (i === 36){
+      console.log("36!");
+    } else console.log(i);
+  }
+}
+
+
+// Nested objects, create function to list the phone's properties
+let phone = {
+  brand: "apple",
+  type: "iPhone",
+  model: "X",
+  characteristics: {
+    capacity: "256 GB",
+    size: {
+      height: "5.65 inches",
+      width: "2.79 inches",
+      depth: "0.3 inches"
+    }
+  },
+  chip: ["bionic", "neural engine", "embedded motion processor"]
+}
+
+function getPhoneDetails(thePhone){
+  console.log(`${thePhone.type} ${thePhone.model} by ${thePhone.brand.toUpperCase()} has the following characteristics: 
+  1. capacity: ${thePhone.characteristics.capacity},
+  2. dimensions: ${thePhone.characteristics.size.height} x ${thePhone.characteristics.size.width} x ${thePhone.characteristics.size.depth}, as well as the chip specs:`);
+ 
+  for(let i = 0; i < thePhone.chip.length; i++){
+    console.log(`${i+1} - ${thePhone.chip[i]}`);
+  }
+}
+ 
+getPhoneDetails(phone);
+
+// The output after function invocation is:
+
+// iPhone X by APPLE has the following characteristics: 
+//   1. capacity: 256 GB,
+//   2. dimensions: 5.65 inches x 2.79 inches x 0.3 inches, as well as the chip specs:
+// 1 - bionic
+// 2 - neural engine
+// 3 - embedded motion processor
