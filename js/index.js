@@ -228,3 +228,51 @@ let student = {
 console.log(student.course.name);
 console.log(student.address.street);
 console.log("Ana moved from ",student.address.city," to ",student.attendedIn," to take ",student.course.type,student.course.name," course.")
+
+//Given a 2D array, print the following:
+const ironCampuses = [
+  ["Mexico City", "Miami", "Sao Paulo"],
+  ["Amsterdam", "Barcelona", "Berlin", "Lisbon", "Madrid", "Paris"]
+];
+
+console.log(ironCampuses[0][1]); // => Miami
+console.log(ironCampuses[1][0]); // => Amsterdam
+console.log(ironCampuses[1][5]); // => Paris
+
+
+//Framework sample:
+let basic = {
+  language: "JavaScript",
+  frameworks: [
+    {
+      end: "back",
+      list: [
+        {
+          name: "ExpressJS",
+          released: 2010
+        },
+        {
+          name: "MeteorJS",
+          released: 2012
+        }
+      ]
+    },
+    {
+      end: "front",
+      list: [
+        {
+          name: "ReactJS",
+          released: 2013
+        },
+        {
+          name: "VueJS",
+          released: 2014
+        }
+      ]
+    }
+  ]
+};
+
+//Use the example from the lesson with frameworks to retrieve the following:
+console.log(basic.frameworks[0].list[0].name); // => ExpressJS
+console.log("In Ironhack, I'll learn",basic.frameworks[0].list[0].name," and ",basic.frameworks[1].list[0].name); // => In Ironhack, I'll learn ExpressJS and ReactJS.
