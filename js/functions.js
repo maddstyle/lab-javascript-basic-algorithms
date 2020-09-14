@@ -57,3 +57,9 @@ function sumAllElems(someArr){
 }
 
 console.log("$" + sumAllElems(prices));
+
+// Define a function stringToLetters() that receives a string as an argument and returns an array of its letters.
+function stringToLetters(name){
+  return name.split("");
+}
+stringToLetters("Michaela")
