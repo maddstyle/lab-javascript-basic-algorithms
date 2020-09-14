@@ -192,3 +192,39 @@ console.log(products);
 products.pop();
 
 console.log(products)
+
+//Given the array, print:
+//your course type (full-time or part-time)
+//the most familiar topic
+//the least familiar topic
+let course = {
+  name: "Web Development",
+  type: ["full-time", "part-time"],
+  topics: ["HTML/CSS & Responsive Design", "JavaScript", "MongoDB", "Node", "Express", "React"]
+};
+
+console.log (course.type[0]);
+console.log (course.topics[0]);
+console.log (course.topics[4]);
+
+//Given the object with nested objects in it, print:
+let student = {
+  firstName: "Ana",
+  lastName: "Blair",
+  course: {
+    name: "Web Development",
+    type: "part-time"
+  },
+  attendedIn: "Madrid",
+  address: {
+    street: "Happy Street",
+    number: 123,
+    city: "Barcelona",
+    zip: 08015,
+    country: "Spain"
+  }
+};
+
+console.log(student.course.name);
+console.log(student.address.street);
+console.log("Ana moved from ",student.address.city," to ",student.attendedIn," to take ",student.course.type,student.course.name," course.")
