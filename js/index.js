@@ -273,6 +273,17 @@ let basic = {
   ]
 };
 
+// Let’s destructure a bit:
+
+// the variable named basic has a type object, and it has two properties:
+// language - type of string and
+// frameworks - type of array
+// frameworks is array of objects
+// each object has two properties:
+// end - type of string (back, front) and
+// list - type of array
+// list has two objects, and each has two properties: one type of string (name) and one type of number (released)
+
 //Use the example from the lesson with frameworks to retrieve the following:
 console.log(basic.frameworks[0].list[0].name); // => ExpressJS
 console.log("In Ironhack, I'll learn",basic.frameworks[0].list[0].name," and ",basic.frameworks[1].list[0].name); // => In Ironhack, I'll learn ExpressJS and ReactJS.
